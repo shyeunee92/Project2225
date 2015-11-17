@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="android.widget.ImageView"/>
+<fullyQualifiedTypeName name="com.project2225.perfectscore.R.id"/>
+<fullyQualifiedTypeName name="com.project2225.perfectscore.R.layout"/>
+<fullyQualifiedTypeName name="android.app.Activity"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="com.project2225.perfectscore.AddActivity"/>
+<fullyQualifiedTypeName name="com.project2225.perfectscore.ListActivity"/>
+<fullyQualifiedTypeName name="com.project2225.perfectscore.ShareActivity"/>
+<fullyQualifiedTypeName name="com.project2225.perfectscore.SettingActivity"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="com.project2225.perfectscore.HomeActivity"/>
+</qualifiedTypeNameHistroy>
