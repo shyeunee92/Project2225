@@ -2,5 +2,8 @@
 <resources>
 
     <string name="app_name">오답왕</string>
-
+	<string name="String_Btn_Scan">Device Scan</string>
+	<string name="String_Paired_Devices">Paired Devices</string>
+	<string name="String_Other_Available_Devices">Other Available Devices</string>
+	<string name="String_Scanning">Scanning...</string>
 </resources>

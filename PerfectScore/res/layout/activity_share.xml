@@ -4,5 +4,33 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
+	<Button
+        android:id="@+id/btn_Scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/String_Btn_Scan" />
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/String_Paired_Devices" />
+
+    <ListView
+        android:id="@+id/listView_Paired"
+        android:layout_width="match_parent"
+        android:layout_height="204dp" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/txtView_DistanceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/String_Other_Available_Devices" />
+
+    <ListView
+        android:id="@+id/listView_NewDevices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
 </LinearLayout>
