@@ -51,7 +51,9 @@
             android:name="SettingActivity"
             android:label="설정"
             android:icon="@android:color/transparent"></activity>
-        <activity android:name="SendActivity"></activity>
+        <activity android:name="SendActivity"
+            android:label="문제 보내기"
+            android:icon="@android:color/transparent"></activity>
     </application>
 
 </manifest>
