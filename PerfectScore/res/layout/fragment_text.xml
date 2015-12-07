@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical" >
-    
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="블루투스 설정" />
-    <Switch
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="서버로 사용"
-        android:id="@+id/s_server" />
-    
-
+        android:lines="3"
+        android:hint="답을 입력해주세요."
+        android:id="@+id/et_answer"
+        android:gravity="top|left" />
 </LinearLayout>

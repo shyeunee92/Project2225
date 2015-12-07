@@ -39,6 +39,10 @@
             android:label="오답 목록"
             android:icon="@android:color/transparent"></activity>
         <activity
+            android:name=".QuestionActivity"
+            android:label="문제"
+            android:icon="@android:color/transparent"></activity>
+        <activity
             android:name="ShareActivity"
             android:label="공유"
             android:icon="@android:color/transparent"></activity>
@@ -46,6 +50,7 @@
             android:name="SettingActivity"
             android:label="설정"
             android:icon="@android:color/transparent"></activity>
+        <activity android:name="SendActivity"></activity>
     </application>
 
 </manifest>

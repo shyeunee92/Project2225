@@ -2,12 +2,6 @@ package com.project2225.perfectscore;
 
 import java.util.ArrayList;
 
-import com.project2225.perfectscore.adapter.CategoryAdapter;
-import com.project2225.perfectscore.adapter.QuestionAdapter;
-import com.project2225.perfectscore.container.Constant;
-import com.project2225.perfectscore.container.QuestionItem;
-import com.project2225.perfectscore.database.NotesDBAdapter;
-
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -21,13 +15,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemLongClickListener;
 
-public class ListActivity extends Activity{
+import com.project2225.perfectscore.adapter.CategoryAdapter;
+import com.project2225.perfectscore.adapter.QuestionAdapter;
+import com.project2225.perfectscore.container.Constant;
+import com.project2225.perfectscore.container.QuestionItem;
+import com.project2225.perfectscore.database.NotesDBAdapter;
+
+public class SendActivity extends Activity{
 	ActionBar abList;
 	DrawerLayout dlList;
 	ActionBarDrawerToggle dlToggle;
@@ -114,26 +114,10 @@ public class ListActivity extends Activity{
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
-				QuestionItem item=questionList.get(position);
-				Intent i=new Intent(ListActivity.this,QuestionActivity.class);
-				i.putExtra(Constant.KEY_TYPE, item.type);
-				i.putExtra(Constant.KEY_CATEGORY, item.category);
-				i.putExtra(Constant.KEY_QUESTION, item.question);
-				i.putExtra(Constant.KEY_ANSWER, item.answer);
-				i.putExtra(Constant.KEY_SELECTION, item.selection);
-				startActivity(i);
-			}
-		});
-		
-		lvQuestion.setOnItemLongClickListener(new OnItemLongClickListener() {
-
-			@Override
-			public boolean onItemLongClick(AdapterView<?> parent, View view,
 					final int position, long id) {
-				AlertDialog.Builder dialog=new AlertDialog.Builder(ListActivity.this);
-				dialog.setTitle("문제 삭제");
-				dialog.setMessage("문제를 삭제하시겠습니까?");
+				AlertDialog.Builder dialog=new AlertDialog.Builder(SendActivity.this);
+				dialog.setTitle("문제 공유");
+				dialog.setMessage("문제를 공유하시겠습니까?");
 				dialog.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
 					
 					@Override
@@ -146,19 +130,13 @@ public class ListActivity extends Activity{
 					
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
-						NotesDBAdapter adapter=new NotesDBAdapter(ListActivity.this);
-						adapter.open();
-						adapter.deleteNote(questionList.get(position).idx);
-						adapter.close();
-						questionList.remove(position);
-						questionAdapter.notifyDataSetChanged();
-						categoryListUpdate();
+						
 					}
 				});
 				dialog.show();
-				return true;
 			}
 		});
+		
 		
 		lvCategory.setOnItemClickListener(new OnItemClickListener() {
 
