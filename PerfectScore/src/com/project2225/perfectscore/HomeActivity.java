@@ -197,8 +197,6 @@ public class HomeActivity extends Activity {
 				// BluetoothDevice 객체를 얻는다.
 				BluetoothDevice device = BluetoothAdapter.getDefaultAdapter()
 						.getRemoteDevice(address);
-				Toast.makeText(getApplicationContext(), address,
-						Toast.LENGTH_SHORT).show();
 				mthConnect = new thConnect(device);
 				mthConnect.start();
 				uiHandler.sendEmptyMessage(0);
@@ -219,7 +217,12 @@ public class HomeActivity extends Activity {
 			}
 			break;
 		case REQUEST_SELECT_QUESTION:
-			
+			String type=data.getStringExtra(Constant.KEY_TYPE);
+			String category=data.getStringExtra(Constant.KEY_CATEGORY);
+			String question=data.getStringExtra(Constant.KEY_QUESTION);
+			String selection=data.getStringExtra(Constant.KEY_SELECTION);
+			String answer=data.getStringExtra(Constant.KEY_ANSWER);
+			sendData(1, type, category, question, selection, answer, 2, 1);
 			break;
 		}
 	}
@@ -249,9 +252,7 @@ public class HomeActivity extends Activity {
 										nOffsetStart + nOffsetCode,
 										readMessage.length());
 
-								Toast.makeText(getApplicationContext(),
-										"P1 Receive Data: " + SubCodeString,
-										Toast.LENGTH_SHORT).show();
+								//Toast.makeText(getApplicationContext(),"P1 Receive Data: " + SubCodeString,Toast.LENGTH_SHORT).show();
 
 								String[] Stringlist = SubCodeString
 										.split(split1);

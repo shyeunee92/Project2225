@@ -85,6 +85,7 @@ public class AddActivity extends Activity {
 							etQuestion.getText().toString(),
 							fragment.getSelection(), fragment.getAnswer(), 1, 1);
 					dbAdapter.close();
+					Toast.makeText(getApplicationContext(), "오답노트에 문제가 추가되었습니다.", Toast.LENGTH_SHORT).show();
 					finish();
 				} else {
 					Toast.makeText(AddActivity.this, "답이 없습니다.",

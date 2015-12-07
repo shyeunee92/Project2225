@@ -6,9 +6,10 @@
     android:padding="8dp" >
 
     <ScrollView
-        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fadingEdge="vertical" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -18,42 +19,62 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
                 android:orientation="horizontal" >
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Category" />
+                    android:layout_margin="4dp"
+                    android:text="Category"
+                    android:textColor="#0097A7"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/et_category"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/input_box"
+                    android:maxLines="1"
+                	android:hint="카테고리를 입력하세요."
                     android:text="기타" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Question" />
+                android:layout_margin="4dp"
+                android:text="Question"
+                android:textColor="#0097A7"
+                android:textSize="21sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/et_question"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/input_box"
+                android:gravity="top|left"
                 android:hint="문제를 입력하세요."
-                android:lines="3"
-                android:gravity="top|left" />
+                android:lines="3" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center_vertical"
                 android:orientation="horizontal" >
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Answer" />
+                    android:layout_margin="4dp"
+                    android:text="Answer"
+                    android:textColor="#0097A7"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
 
                 <RadioGroup
                     android:id="@+id/rg_type"
@@ -62,16 +83,16 @@
                     android:orientation="horizontal" >
 
                     <RadioButton
+                        android:id="@+id/rb_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="주관식"
-                        android:id="@+id/rb_text" />
+                        android:text="주관식" />
 
                     <RadioButton
+                        android:id="@+id/rb_selection"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="객관식"
-                        android:id="@+id/rb_selection" />
+                        android:text="객관식" />
                 </RadioGroup>
             </LinearLayout>
 
@@ -85,10 +106,13 @@
     </ScrollView>
 
     <Button
-        android:layout_weight="0"
         android:id="@+id/bt_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="추가" />
+        android:layout_marginTop="8dp"
+        android:layout_weight="0"
+        android:background="@drawable/button_02"
+        android:text="추가"
+        android:textColor="@android:color/white" />
 
 </LinearLayout>

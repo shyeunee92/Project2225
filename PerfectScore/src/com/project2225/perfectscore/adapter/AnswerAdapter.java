@@ -47,7 +47,7 @@ public class AnswerAdapter extends BaseAdapter{
 		View view=convertView;
 		ViewHolder vh;
 		if(view==null){
-			view=inflater.inflate(R.layout.item_category, null);
+			view=inflater.inflate(R.layout.item_answer, null);
 			vh=new ViewHolder();
 			vh.tvItem=(TextView)view.findViewById(R.id.tv_category);
 			view.setTag(vh);

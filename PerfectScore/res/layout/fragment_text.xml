@@ -6,8 +6,9 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:lines="3"
-        android:hint="답을 입력해주세요."
+        android:minLines="6"
+        android:hint="답을 입력하세요."
         android:id="@+id/et_answer"
-        android:gravity="top|left" />
+        android:gravity="top|left"
+        android:background="@drawable/input_box" />
 </LinearLayout>

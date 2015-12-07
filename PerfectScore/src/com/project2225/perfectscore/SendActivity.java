@@ -115,6 +115,7 @@ public class SendActivity extends Activity{
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					final int position, long id) {
+				final QuestionItem item=questionList.get(position);
 				AlertDialog.Builder dialog=new AlertDialog.Builder(SendActivity.this);
 				dialog.setTitle("문제 공유");
 				dialog.setMessage("문제를 공유하시겠습니까?");
@@ -130,7 +131,14 @@ public class SendActivity extends Activity{
 					
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
-						
+						Intent i=getIntent();
+						i.putExtra(Constant.KEY_TYPE, item.type);
+						i.putExtra(Constant.KEY_CATEGORY, item.category);
+						i.putExtra(Constant.KEY_QUESTION, item.question);
+						i.putExtra(Constant.KEY_ANSWER, item.answer);
+						i.putExtra(Constant.KEY_SELECTION, item.selection);
+						setResult(RESULT_OK,i);
+						finish();
 					}
 				});
 				dialog.show();

@@ -6,12 +6,14 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lv_answer" />
-    <TextView
+        android:id="@+id/lv_answer"
+        android:divider="@android:color/transparent" />
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:gravity="center"
-        android:text="항목이 없습니다."
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/dial_empty_item"
+        android:scaleType="fitCenter"
         android:id="@+id/tv_empty" />
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,13 +24,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="항목을 추가해주세요."
-            android:id="@+id/et_editor" />
+            android:hint="항목을 추가하세요."
+            android:id="@+id/et_editor"
+            android:background="@drawable/input_box" />
         <Button
+            android:layout_marginLeft="4dp"
+            android:textSize="15sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="42dp"
             android:text="항목 추가"
-            android:id="@+id/bt_add_item" />
+            android:paddingRight="4dp"
+            android:paddingLeft="4dp"
+            android:id="@+id/bt_add_item" 
+            android:background="@drawable/button_01"
+            android:textColor="@android:color/white"/>
     </LinearLayout>
 
 </LinearLayout>

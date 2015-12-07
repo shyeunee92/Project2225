@@ -52,6 +52,7 @@ public class QuestionAdapter extends BaseAdapter{
 			}else{
 				vh.cbCheck.setVisibility(View.GONE);
 			}
+			vh.tvNumber=(TextView)view.findViewById(R.id.tv_number);
 			vh.tvQuestion=(TextView)view.findViewById(R.id.tv_question);
 			vh.tvTime=(TextView)view.findViewById(R.id.tv_time);
 			view.setTag(vh);
@@ -64,6 +65,7 @@ public class QuestionAdapter extends BaseAdapter{
 		if(adapterType){
 			vh.cbCheck.setChecked(item.isChecked);
 		}
+		vh.tvNumber.setText("Q"+(position+1)+".");
 		vh.tvQuestion.setText(item.question);
 		vh.tvTime.setText(item.time);
 		
@@ -72,6 +74,7 @@ public class QuestionAdapter extends BaseAdapter{
 	
 	private class ViewHolder{
 		CheckBox cbCheck;
+		TextView tvNumber;
 		TextView tvQuestion;
 		TextView tvTime;
 	}
